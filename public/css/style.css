@@ -1,0 +1,88 @@
+.header-brand {
+  text-decoration: unset;
+  color: black;
+}
+
+.header__group > a > img {
+  width: 100px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex-container > div > div {
+  border: 2px solid rgb(238, 230, 230);
+}
+
+.header-brand__logo {
+  width: 100px;
+  height: 80px;
+}
+.header-brand__title {
+  text-align: center;
+}
+
+.twitter-timeline {
+  margin-left: 20px;
+}
+b {
+  color: white;
+}
+/*.container-berita {*/
+/*  background-color: aliceblue;*/
+/*}*/
+.container {
+  background-color: white;
+}
+.container-foot {
+  color: white;
+}
+.nav {
+  width: 100px;
+  height: 120;
+}
+.carousel-inner {
+  height: auto;
+  width: auto;
+  align-content: flex-start;
+}
+/* .flex-container > .post > img >* {
+  width: 265px;
+  height: 260px;
+} */
+
+.item > img {
+  width: auto;
+}
+/*.row-berita {*/
+/*  background-color: rgb(217, 244, 247);*/
+/*}*/
+.flex-container {
+  margin-bottom: 10px;
+}
+.flex-container > row {
+  display: flex;
+}
+.card {
+  width: 240px;
+  height: 200px;
+}
+.foot {
+  background-color: antiquewhite;
+}
+
+.isi-berita {
+  font-size: 18px;
+  color: #0000;
+  font-weight: bold;
+}
+.lokasi {
+  margin-bottom: 20px;
+}
+.textwidget custom-html-widget {
+  margin-left: 15px;
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+}

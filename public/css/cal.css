@@ -1,0 +1,155 @@
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+
+  overflow: hidden;
+  position: relative;
+  outline: none;
+  perspective: 1000px;
+}
+
+.mains {
+  position: absolute;
+  width: 600px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  transition: all 0.195s ease;
+  transform-style: preserve-3d;
+}
+.mains.is-rotated-left {
+  transform: translate(-50%, -50%) rotateY(-4deg);
+}
+.mains.is-rotated-right {
+  transform: translate(-50%, -50%) rotateY(4deg);
+}
+.mains .sideb,
+.mains .right-wrapper {
+  background-color: white;
+  width: 50%;
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mains .header {
+  padding: 15px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.mains .header i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+.mains .header span {
+  display: inline-block;
+  margin: 0 3px;
+  font-weight: 700;
+}
+.mains .right-wrapper {
+  background-color: #f05855;
+  color: white;
+  transform-origin: left center;
+  transform: rotateY(110deg);
+  transition: all 0.5s;
+}
+.mains .right-wrapper.is-active {
+  transform: rotateY(0deg);
+}
+.mains .right-wrapper .header {
+  text-align: left;
+  justify-content: center;
+}
+.mains .right-wrapper .day {
+  font-size: 12em;
+  text-indent: -12px;
+  display: block;
+}
+.mains .right-wrapper .month {
+  font-size: 2.5em;
+}
+.mains .sideb .showDate {
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+.mains .sideb .showDate i {
+  cursor: pointer;
+  background: #f05855;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.mains .sideb .showDate i.is-active {
+  transform: scale(-1);
+}
+.mains .sideb table {
+  text-align: center;
+
+  width: 90%;
+  margin: 30px auto 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.mains .sideb table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0.75em;
+  color: transparent;
+}
+.mains .sideb table th {
+  color: #f05855;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.mains .sideb table td {
+  padding: 11px 5px;
+  color: #ced0ce;
+  font-size: 0.75em;
+  transition: all 0.3s;
+  position: relative;
+}
+.mains .sideb table td::before {
+  content: "";
+  display: none;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -8px);
+  background-color: #f05855;
+}
+.mains .sideb table td.currentDay::before {
+  display: block;
+}
+.mains .sideb table td.selectable {
+  color: #303633;
+  cursor: pointer;
+}
+.mains .sideb table td.selectable:hover {
+  background: #f05855;
+  color: white;
+}
+.mains .sideb table td.between {
+  background-color: #333;
+  color: white;
+}
+.mains .sideb table td.active,
+.mains .sideb table td.hover {
+  background: #f05855;
+  color: white;
+}
